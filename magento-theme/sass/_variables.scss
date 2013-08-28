@@ -72,7 +72,7 @@ $buttonBackground:                  transparent url(../images/bkg_btn.gif) no-re
 $buttonSpanBackground:              transparent;
 $buttonSpanSpanBackground:          transparent;
 $buttonTextColor:                   #fff;
-$buttonTextShadow:                  ""; // null = ""
+$buttonTextShadow:                  null;
 $buttonBorder:                      1px solid #ccc;
 $buttonFont:                        normal 14px/18px "Helvetica Neue", Helvetica, Arial, sans-serif;
 $buttonBorderRadius:                5px;
@@ -99,7 +99,7 @@ $inputBackground:               #fff url(../images/bkg_input.gif) 0 0 repeat-x;
 $inputBackgroundDisabled:       #d7d7d7;
 $inputColorDisabled:            #d7d7d7;
 $inputBorder:                   1px solid #ccc;
-$inputBorderRadius:             "";
+$inputBorderRadius:             null;
 $inputPlaceHolderColor:         #555;
 $inputPlaceHolderBackground:    #ccc;
 
