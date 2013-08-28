@@ -3,7 +3,7 @@ CSS-framework-for-MAGENTO---powered-by-SASS-lang
 
 CSS framework for MAGENTO - powered by SASS lang
 
-/*
+
 * Magento - CSS framework
 * Author: kien.hnaptech@gmail.com
 * Copyright (c)2013  Mr.KienNguyen
@@ -11,4 +11,4 @@ CSS framework for MAGENTO - powered by SASS lang
 * Licensed under the MIT licenses :)
 * Powered by SASS lang
 * Requires: RubyInstaller
-*/
+
