@@ -11,8 +11,9 @@
 }
 
 // retina images
+//@include retina-background-image("../images/background", png, 47px,27px);
 @mixin retina-background-image($file, $type, $width, $height) {
-  background-image: url($file + '.' + $type);
+  background-image: url(unquote($file) + '.' + $type);
 
   @media
   only screen and (-webkit-min-device-pixel-ratio: 1.5),
@@ -20,7 +21,7 @@
   only screen and (min--moz-device-pixel-ratio: 1.5),
   only screen and (min-device-pixel-ratio: 1.5) {
     & {
-      background-image: url($file + '@2x.' + $type);
+      background-image: url(unquote($file) + '@2x.' + $type);
       -moz-background-size:     $width $height;
       -webkit-background-size:  $width $height;
       -o-background-size:       $width $height;

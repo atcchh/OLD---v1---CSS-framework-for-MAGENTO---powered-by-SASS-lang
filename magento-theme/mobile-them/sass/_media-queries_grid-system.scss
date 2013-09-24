@@ -3,21 +3,21 @@
 ================================================== */
 
 //$wide-screen-width: 1200px;
-  $base-width: 960px;
-  $tablet-width: 768px;
-  $mobile-landscape-width: 480px;
-  $mobile-portrait-width: 320px;
+$base-width: 960px;
+$tablet-width: 768px;
+$mobile-landscape-width: 480px;
+$mobile-portrait-width: 320px;
 
-  // Fix Grid
-  $grid-width: 960;
+// Fix Grid
+$grid-width: 960px;
+$totals-columns: 12;
+$margin: 10px;
+
+/* Fluid Grid
+  $grid-width: 100%;
   $totals-columns: 12;
-  $margin: 10px;
-
-  /* Fluid Grid
-    $grid-width: 100%;
-    $totals-columns: 12;
-    $margin: 1%;
-  */
+  $margin: 1%;
+*/
 
 /* Mixin Media Queries
 ================================================== */
@@ -28,18 +28,18 @@
   @mixin desktop {
     @media only screen and (min-width: $base-width) and (max-width: $wide-screen-widt - 1) { @content; }
   }*/
-  @mixin desktop {
-    @media only screen and (min-width: $base-width) { @content; }
-  }
-  @mixin tablet {
-    @media only screen and (min-width: $tablet-width) and (max-width: $base-width - 1) { @content; }
-  }
-  @mixin mobi-landscape {
-    @media only screen and (max-width: $tablet-width - 1) { @content; }
-  }
-  @mixin mobi-portrait {
-    @media only screen and (max-width: $mobile-landscape-width - 1) { @content; }
-  }
+@mixin desktop {
+  @media only screen and (min-width: $base-width) { @content; }
+}
+@mixin tablet {
+  @media only screen and (min-width: $tablet-width) and (max-width: $base-width - 1) { @content; }
+}
+@mixin mobi-landscape {
+  @media only screen and (max-width: $tablet-width - 1) { @content; }
+}
+@mixin mobi-portrait {
+  @media only screen and (max-width: $mobile-landscape-width - 1) { @content; }
+}
 
 /* #Clearing
 ================================================== */
@@ -148,6 +148,20 @@ or wrap each row of columns in a @include row */
 @mixin pull($num: 1) {
   margin-right: $grid-width - ($grid-width - (($grid-width / $totals-columns) * $num)) + $margin;
   position: relative;
+}
+
+/* colum base - margin = 0 */
+@mixin columns-base ($num: 1) {
+  @include column;
+  width: $num * ($grid-width / $totals-columns);
+}
+
+/* colum offset */
+@mixin columns-offset($num: 1, $offset: $margin) {
+  @include column;
+  width: ($num * ($grid-width / $totals-columns)) - (2 * $offset);
+  padding-left: $offset;
+  padding-right: $offset;
 }
 
 
