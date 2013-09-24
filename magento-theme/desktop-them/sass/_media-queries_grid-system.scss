@@ -154,6 +154,8 @@ or wrap each row of columns in a @include row */
 @mixin columns-base ($num: 1) {
   @include column;
   width: $num * ($grid-width / $totals-columns);
+  margin-left: 0;
+  margin-right: 0;
 }
 
 /* colum offset */
@@ -162,6 +164,8 @@ or wrap each row of columns in a @include row */
   width: ($num * ($grid-width / $totals-columns)) - (2 * $offset);
   padding-left: $offset;
   padding-right: $offset;
+  margin-left: 0;
+  margin-right: 0;
 }
 
 
