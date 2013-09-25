@@ -4,7 +4,9 @@
 @mixin font-face($fontname: fontFamilyName, $fontsrc: fontFileSrc) {
   @font-face {
     font-family: quote($fontname);
-    src:  url('#{unquote($fontsrc)}.woff')                        format('woff'),
+    src:  url('#{unquote($fontsrc)}.eot');
+    src:  url('#{unquote($fontsrc)}.eot?#iefix')                  format('embedded-opentype'),
+          url('#{unquote($fontsrc)}.woff')                        format('woff'),
           url('#{unquote($fontsrc)}.ttf')                         format('truetype'),
           url('#{unquote($fontsrc)}.svg##{unquote($fontname)}')   format('svg');
     font-weight: normal;
@@ -42,31 +44,4 @@
   }
 }
 
-// fonts variable
-
-// base fonts
-$fontBold:                    helvetica-bold;
-$fontBoldItalic:              null;
-
-$fontMedium:                  null;
-$fontMediumItalic:            null;
-
-$fontRegular:                 helvetica-regular;
-$fontRegularItalic:           null;
-
-$fontLight:                   null;
-$fontLightItalic:             null;
-
-// font oswald
-$fontOswaldBold:              Oswald-Bold-webfont;
-$fontOswaldBoldItalic:        null;
-
-$fontOswaldMedium:            null;
-$fontOswaldMediumItalic:      null;
-
-$fontOswaldRegular:           Oswald-Regular-webfont;
-$fontOswaldRegularItalic:     null;
-
-$fontOswaldLight:             Oswald-Light-webfont;
-$fontOswaldLightItalic:       null;
 
