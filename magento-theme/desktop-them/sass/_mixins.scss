@@ -165,20 +165,6 @@
 	-ms-filter:        "FlipH";
 }
 
-/* FONT FACE */
-@mixin font-face($fontname: fontFamilyName, $fontsrc: fontFileSrc) {
-  @font-face {
-    font-family: quote($fontname);
-    src:  url('#{$fontsrc}.eot');
-    src:  url('#{$fontsrc}.eot?#iefix')         format('embedded-opentype'),
-          url('#{$fontsrc}.woff')               format('woff'),
-          url('#{$fontsrc}.ttf')                format('truetype'),
-          url('#{$fontsrc}.svg##{$fontname}')   format('svg');
-    font-weight: normal;
-    font-style: normal;
-  }
-}
-
 // User select
 // For selecting text on the page
 @mixin user-select($select) {
