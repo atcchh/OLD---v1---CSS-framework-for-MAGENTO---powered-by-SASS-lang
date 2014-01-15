@@ -48,6 +48,10 @@ h5            { font: $heading_h5_font; color: $heading_h5_color;}
 h6            { font: $heading_h6_font; color: $heading_h6_color;}
 
 /* Button  */
+
+button,
+.button { -webkit-border-fit:border !important; }  /* <- Safari Fix padding*/
+
 a.button,
 button.button {
   background:$buttonBackground;
